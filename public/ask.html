@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b14">
+  <title>Ask a Doubt | Doubt Solver</title><meta name="description" content="Ask an academic question and get a clear, step-by-step explanation in maths, science, programming and more.">
+  <link rel="canonical" href="https://example.com/ask.html"><meta property="og:type" content="website"><meta property="og:title" content="Ask a Doubt | Doubt Solver"><meta property="og:description" content="Get a clear, step-by-step explanation for the question you are working on."><meta property="og:url" content="https://example.com/ask.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/style.css">
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="brand" href="/" aria-label="Doubt Solver home"><span class="brand-mark" aria-hidden="true">d.</span><span>Doubt<span class="brand-light">Solver</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button><div class="nav-menu" id="site-menu"><a href="/">Home</a><a href="/ask.html" aria-current="page">Ask Doubt</a><a href="/subjects.html">Subjects</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a class="nav-history" href="/history.html">History</a><a class="nav-cta" href="/ask.html">Start solving <span aria-hidden="true">↗</span></a></div></nav></header>
+  <main id="main" class="page-shell solver-page">
+    <div class="page-intro"><p class="eyebrow"><span class="status-dot"></span> YOUR STUDY SPACE</p><h1>Let's figure<br><span class="gradient-text">this out.</span></h1><p>Share what you're working on. A clear explanation is a good place to start.</p></div>
+    <div class="solver-layout">
+      <section class="solver-form-panel glass-panel" aria-labelledby="question-heading">
+        <div class="panel-topline"><span class="panel-index">01</span><span>NEW QUESTION</span><span class="panel-topline-rule"></span></div>
+        <h2 id="question-heading" class="solver-form-heading">Your question, in your words.</h2>
+        <form id="solver-form">
+          <label class="field-label" for="subject">Subject</label>
+          <div class="select-wrap"><select id="subject" name="subject" required><option>Mathematics</option><option>Physics</option><option>Chemistry</option><option>Computer Science</option><option>Programming</option><option>English</option><option>General</option></select><span aria-hidden="true">⌄</span></div>
+          <div class="label-row"><label class="field-label" for="question">Your question</label><span class="field-hint">Be as specific as you like</span></div>
+          <textarea id="question" name="question" maxlength="3000" required placeholder="For example: Why does dividing by a fraction make the number larger?" aria-describedby="question-count"></textarea>
+          <div class="form-meta"><span id="question-count" aria-live="polite">0 / 3000</span><span>Shift + Enter for a new line</span></div>
+          <div id="solver-error" class="form-message error-message" role="alert" hidden></div>
+          <button class="button button-primary solve-button" id="solve-button" type="submit"><span class="button-label">Solve my doubt</span><span class="button-arrow" aria-hidden="true">↗</span><span class="button-spinner" aria-hidden="true"></span></button>
+          <p class="privacy-note"><span aria-hidden="true">◈</span> Your question is sent securely to the AI service to generate an answer.</p>
+        </form>
+      </section>
+      <aside class="example-panel" aria-labelledby="example-heading"><p class="eyebrow">NEED A STARTING POINT?</p><h2 id="example-heading">Try asking…</h2><p class="example-intro">Choose a prompt to drop it into the question box.</p>
+        <div class="example-list">
+          <button class="example-question" type="button" data-subject="Mathematics"><span class="example-subject">MATHS</span><span>How do I factorise x² + 5x + 6?</span><span class="example-add">+</span></button>
+          <button class="example-question" type="button" data-subject="Physics"><span class="example-subject">PHYSICS</span><span>Why does a heavier object not fall faster?</span><span class="example-add">+</span></button>
+          <button class="example-question" type="button" data-subject="Chemistry"><span class="example-subject">CHEMISTRY</span><span>What makes a chemical reaction exothermic?</span><span class="example-add">+</span></button>
+          <button class="example-question" type="button" data-subject="Programming"><span class="example-subject">CODE</span><span>When should I use a for loop instead of while?</span><span class="example-add">+</span></button>
+        </div>
+        <a class="text-link examples-link" href="/subjects.html">Browse subjects <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+    <section class="answer-panel glass-panel" id="answer-panel" aria-labelledby="answer-heading" hidden>
+      <div class="answer-panel-header"><div><p class="eyebrow"><span class="status-dot"></span> YOUR EXPLANATION</p><h2 id="answer-heading">Let's unpack it.</h2></div><div class="answer-actions"><button class="button button-small button-outline" id="copy-answer" type="button"><span aria-hidden="true">▢</span> Copy answer</button><button class="icon-button" id="clear-answer" type="button" aria-label="Clear answer and question" title="Clear answer and question">×</button></div></div>
+      <div class="answer-context" id="answer-context"></div><div class="answer-content" id="answer-content" aria-live="polite"></div><p class="answer-disclaimer">AI-generated explanations can be incorrect or incomplete. Verify important information with trusted learning materials.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-main section-wrap"><div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">d.</span><span>Doubt<span class="brand-light">Solver</span></span></a><p>Ask. Understand. Learn.</p></div><div class="footer-links"><a href="/subjects.html">Subjects</a><a href="/history.html">History</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></div><div class="footer-bottom section-wrap"><span>Made for curious minds.</span><span>AI can make mistakes. Verify important information.</span><span>© <span data-year></span> Doubt Solver</span></div></footer>
+  <script src="/js/main.js" defer></script><script src="/js/solver.js" defer></script>
+</body></html>
